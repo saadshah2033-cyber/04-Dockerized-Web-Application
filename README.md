@@ -45,7 +45,7 @@ The application used for this project is **FlowPilot**, a task and project manag
 
 The application is organized into separate frontend and backend directories. Docker configuration files are maintained at the project root.
 
-![Project File Structure](screenshots/01-filestructure.png)
+![Project File Structure](screenshots/01-filestructure.jpeg)
 
 Main components:
 
@@ -66,7 +66,7 @@ Docker Compose is used to manage three services:
 | `api` | Runs the Node.js and Express backend |
 | `mongo` | Stores application data |
 
-![Docker Compose Architecture](screenshots/02-docker-compose-arch.png)
+![Docker Compose Architecture](screenshots/02-docker-compose-arch.jpeg)
 
 ### Application Architecture
 
@@ -110,7 +110,7 @@ To inspect running containers:
 docker compose ps
 ```
 
-![Running Docker Containers](screenshots/03-running-containers.png)
+![Running Docker Containers](screenshots/03-running-containers.jpeg)
 
 All three services — `web`, `api`, and `mongo` — were successfully started.
 
@@ -125,7 +125,7 @@ The application uses internal service communication:
 - MongoDB is not exposed publicly.
 - The backend API port is not exposed publicly.
 
-![Docker Networking](screenshots/04-Docker-networking.png)
+![Docker Networking](screenshots/04-Docker-networking.jpeg)
 
 This keeps internal services isolated from direct public access.
 
@@ -139,7 +139,7 @@ Local application address:
 http://localhost
 ```
 
-![Application Dashboard](screenshots/05-dashboard.png)
+![Application Dashboard](screenshots/05-dashboard.jpeg)
 
 ## 6. Application Functionality
 
@@ -156,7 +156,7 @@ The application provides task and project management functionality, including:
 - Dashboard analytics.
 - Light and dark themes.
 
-![Application Functionality](screenshots/06-functionality.png)
+![Application Functionality](screenshots/06-functionality.jpeg)
 
 ## 7. Task Records
 
@@ -170,7 +170,7 @@ The backend uses Mongoose to interact with MongoDB and provides API endpoints fo
 
 Project records are also stored in MongoDB and used to organize tasks within the application.
 
-![Project Records](screenshots/08-proj-emailrecord.png)
+![Project Records](screenshots/08-proj-emailrecord.jpeg)
 
 ## 9. Docker Installation on Azure VM
 
@@ -185,7 +185,7 @@ docker --version
 docker compose version
 ```
 
-![Docker Installation on VM](screenshots/09-docker-installation-invm.png)
+![Docker Installation on VM](screenshots/09-docker-installation-invm.jpeg)
 
 ## 10. Application Directory on Azure VM
 
@@ -193,7 +193,7 @@ The FlowPilot repository was cloned onto the Azure VM.
 
 The application directory contains the frontend, backend, Docker configuration, and deployment files.
 
-![Azure VM Directory Files](screenshots/10-directory-files.png)
+![Azure VM Directory Files](screenshots/10-directory-files.jpeg)
 
 The environment configuration was created separately on the VM. Sensitive credentials were not committed to GitHub.
 
@@ -219,7 +219,7 @@ ssh -i <private-key-file> azureuser@<VM-PUBLIC-IP>
 
 SSH access was configured through the Azure Network Security Group.
 
-![Azure SSH Login](screenshots/12-login-azure.png)
+![Azure SSH Login](screenshots/12-login-azure.jpeg)
 
 ## 13. FlowPilot Dashboard on Azure
 
@@ -229,7 +229,7 @@ After deployment, the application was accessed through the Azure VM's public IP 
 http://20.219.134.32
 ```
 
-![FlowPilot Azure Dashboard](screenshots/13-dashboard-azure.png)
+![FlowPilot Azure Dashboard](screenshots/13-dashboard-azure.jpeg)
 
 The application was successfully served from the Azure VM using the Nginx web container.
 
@@ -237,7 +237,7 @@ The application was successfully served from the Azure VM using the Nginx web co
 
 The deployed application was tested by logging in and creating tasks through the web interface.
 
-![Tasks Added on Azure Deployment](screenshots/14-added-tasks.png)
+![Tasks Added on Azure Deployment](screenshots/14-added-tasks.jpeg)
 
 This verified that the frontend, backend API, and MongoDB database were communicating correctly in the cloud deployment.
 
@@ -293,7 +293,7 @@ GitHub repository secrets are used to store deployment credentials:
 | `AZURE_USER` | VM username |
 | `AZURE_SSH_KEY` | Private SSH key |
 
-![GitHub Actions CI/CD Success](screenshots/15-ci-cd-success.png)
+![GitHub Actions CI/CD Success](screenshots/15-ci-cd-success.jpeg)
 
 The GitHub Actions workflow completed successfully, confirming that automated deployment was working.
 
